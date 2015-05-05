@@ -1,5 +1,10 @@
 using RandomFerns
 using Base.Test
 
-# write your own tests here
-@test 1 == 1
+test = ["regression_test.jl"]
+
+println("Running tests...")
+for curtest in test
+  println("Test: $curtest")
+  include(curtest)
+end
